@@ -11,7 +11,7 @@ const BouncyText = ({ text = "Bouncy Animation" }: { text?: string }) => {
   }, []);
 
   return (
-    <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-center">
+    <h1 className="text-4xl md:text-7xl lg:text-6xl text-white text-center">
       {text.split("").map((char, i) => (
         <span
           key={`${animationKey}-${i}`}
@@ -366,7 +366,7 @@ const Header = () => {
                     <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-4xl border border-orange-500/40 flex items-center justify-center overflow-hidden shadow-2xl">
                       <div className="w-full h-full bg-gradient-to-br from-orange-700 to-red-800 rounded-4xl flex items-center justify-center">
                         <div className="text-9xl text-white font-black drop-shadow-2xl">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfpVF_grqBGjheT_7uuKwKPTcj25fKghns0bLF1mbTp7jfRm_ayPhjCoQXrSXlRNEVXTo&usqp=CAU" alt="" />
+                        <img src="./shawon.png" alt="" />
                         </div>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-4xl" />
