@@ -6,17 +6,18 @@ import Footer from './components/Footer'
 import GallerySection from './components/GallerySection'
 import Header from './components/Header/Header'
 import PersonalGallerySection from './components/PersonalGallerySection'
+import ScrollProgressBar from './components/ScrollProgressBar'
 import VideoSection from './components/VideoSection'
 
 function App() {
   return (
     <div>
-
+      <ScrollProgressBar />
       <Header />
-      {/* <AboutSection /> */}
-      {/* <EventsSection /> */}
+      <AboutSection />
+      <EventsSection />
       {/* <GallerySection /> */}
-      <PersonalGallerySection />
+      {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
       {/* <BlogSection /> */}
       {/* <ContactSection /> */}

@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html,
+body {
+  font-family: "Hind Siliguri", "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

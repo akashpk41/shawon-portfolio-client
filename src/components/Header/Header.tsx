@@ -220,7 +220,7 @@ const Header = () => {
                   <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-4xl border border-orange-500/40 flex items-center justify-center overflow-hidden shadow-2xl">
                     <div className="w-full h-full bg-gradient-to-br from-orange-700 to-red-800 rounded-4xl flex items-center justify-center">
                       <div className="text-8xl text-white font-black drop-shadow-2xl">
-                       <img src="./shawon.png" alt="" />
+                       <img src="https://i.ibb.co.com/b56xmSCk/shawon.png" alt="" />
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-4xl" />
@@ -366,7 +366,7 @@ const Header = () => {
                     <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-4xl border border-orange-500/40 flex items-center justify-center overflow-hidden shadow-2xl">
                       <div className="w-full h-full bg-gradient-to-br from-orange-700 to-red-800 rounded-4xl flex items-center justify-center">
                         <div className="text-9xl text-white font-black drop-shadow-2xl">
-                        <img src="./shawon.png" alt="" />
+                        <img src="https://i.ibb.co.com/b56xmSCk/shawon.png" alt="" />
                         </div>
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-4xl" />
