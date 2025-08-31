@@ -30,13 +30,27 @@ const EventsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Auto-scroll active thumbnail into view
+  useEffect(() => {
+    if (thumbnailRef.current) {
+      const activeThumb = thumbnailRef.current.children[activeSlide];
+      if (activeThumb) {
+        activeThumb.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+    }
+  }, [activeSlide]);
+
   const pastEvents = [
     {
       id: 1,
       title: "Community Development Program",
       date: "07-March-2025",
       location: "Pabna District",
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+      image: "https://scontent.fdac27-2.fna.fbcdn.net/v/t39.30808-6/518331708_2025287868279857_9018764783219570489_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGpoDl_Lq9SH6sjS1M-FEZzy7ZqVAMStiXLtmpUAxK2Jaj1EbHOhyNixPMAcSeYtZFjQNX6GHZwDgDPD16pb08I&_nc_ohc=ZiodxTa4EuMQ7kNvwEmxVHV&_nc_oc=Adniqb0fVfEFP3rLyTOhUeW2LnF-8j2cSmTOqaWPNkfBugC0AHy29IfT_hDx7k156uc&_nc_zt=23&_nc_ht=scontent.fdac27-2.fna&_nc_gid=m0nLFB5H-xXmseW4qNA_Rw&oh=00_AfWM2eMvyDEVdFKMHZrLBso2qy0_U94-lR_YK5668_yGpA&oe=68B9D5A6",
       description: "Successful completion of rural development initiative",
       attendees: "500+",
       category: "Development"
@@ -46,7 +60,7 @@ const EventsSection = () => {
       title: "Youth Leadership Summit",
       date: "25-February-2025",
       location: "Rajshahi Division",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
+      image: "https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/528167948_2043384106470233_2821623954817278859_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE83dA3RQFsanpisrMpXBZDG1AONrp_mUcbUA42un-ZR9CWYcO_Hqepcc31EZkq7uwsCxR0vZ1vXgXLBece5q91&_nc_ohc=XOhyG8P1jj4Q7kNvwGf-Ncp&_nc_oc=AdmsClCXYsUdmxgrDr3kw-0XdX-26x_SGxA2FzDZio_FpLdWEsRtTbikAi5H3rYPcwg&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=MBakayHMHWafCUY8ESZ7yw&oh=00_AfXKDYWGO9B-RGo3MkO0eM5hx7f9I3oyDjA4d_m_E-_8cw&oe=68B9B9FD",
       description: "Empowering young leaders for future Bangladesh",
       attendees: "300+",
       category: "Leadership"
@@ -56,8 +70,7 @@ const EventsSection = () => {
       title: "Healthcare Awareness Campaign",
       date: "18-February-2025",
       location: "Pabna Medical College",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      description: "Free health checkup and awareness program",
+      image: "https://scontent.fdac27-2.fna.fbcdn.net/v/t39.30808-6/537704752_2060109281464382_2446731043208468703_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFWpu68Xu3QW2UdXIBp22IDXEgDDV8hRXNcSAMNXyFFc9xXUoBnvI1IoCgj4BpGYQsbTik-CUoJq0MVH-9tlPiq&_nc_ohc=2qzGegZPq0EQ7kNvwFU7o3h&_nc_oc=AdljBSYetYw-ZE2rpTq6n4a1rWZ9viaqLXThaikJW7zGNIcvys3EiUZcRI-AGALRCxQ&_nc_zt=23&se=-1&_nc_ht=scontent.fdac27-2.fna&_nc_gid=rmPIHjx9rJPq5Ax0_wCyGQ&oh=00_AfUk7ppXKkuv-cJ-C6oSCqJvUtwuxR6sb2BrbWQgKEjHMA&oe=68B9BFBE",
       attendees: "800+",
       category: "Healthcare"
     },
@@ -66,7 +79,7 @@ const EventsSection = () => {
       title: "Education Reform Discussion",
       date: "10-February-2025",
       location: "Pabna University",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+      image: "https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/517533966_2019447902197187_8539568872444934234_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeH0ddi4LF3eelVaugp3LWE-DzEUP0ynHU4PMRQ_TKcdTkMdNX0cROV8YXJ75385ILENkdcFD-qwTLJsGgqkKuk_&_nc_ohc=fReAQtWSo5UQ7kNvwHJniJS&_nc_oc=AdkGFbEN6m6Z3A-zO7kCqSz1L2G_EcahuepGRz-OtD73gV8bjMxzFhzWP06paXgJSlY&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=ObyP2KyywpMAh8jChLDatA&oh=00_AfXAa6OfCE30FVALAKFypuDbS7AzCMNJAADEKVsfmz7a2A&oe=68B9AABB",
       description: "Dialogue on modernizing education system",
       attendees: "200+",
       category: "Education"
@@ -90,6 +103,46 @@ const EventsSection = () => {
       description: "Technology advancement for rural communities",
       attendees: "150+",
       category: "Technology"
+    },
+    {
+      id: 7,
+      title: "Environmental Protection Rally",
+      date: "20-January-2025",
+      location: "Pabna Central Park",
+      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+      description: "Awareness campaign for environmental conservation",
+      attendees: "600+",
+      category: "Environment"
+    },
+    {
+      id: 8,
+      title: "Cultural Heritage Festival",
+      date: "15-January-2025",
+      location: "Pabna Cultural Center",
+      image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop",
+      description: "Celebrating Bengali culture and traditions",
+      attendees: "1200+",
+      category: "Culture"
+    },
+    {
+      id: 9,
+      title: "Small Business Development",
+      date: "10-January-2025",
+      location: "Pabna Chamber of Commerce",
+      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
+      description: "Supporting local entrepreneurs and businesses",
+      attendees: "250+",
+      category: "Business"
+    },
+    {
+      id: 10,
+      title: "Sports Excellence Program",
+      date: "05-January-2025",
+      location: "Pabna Sports Complex",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      description: "Promoting sports and physical fitness",
+      attendees: "400+",
+      category: "Sports"
     }
   ];
 
@@ -148,6 +201,21 @@ const EventsSection = () => {
     setActiveSlide(index);
   };
 
+  // Thumbnail scroll functions
+  const scrollThumbnails = (direction) => {
+    if (thumbnailRef.current) {
+      const scrollAmount = 200;
+      const newScrollLeft = direction === 'left'
+        ? thumbnailRef.current.scrollLeft - scrollAmount
+        : thumbnailRef.current.scrollLeft + scrollAmount;
+
+      thumbnailRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const getCategoryColor = (category) => {
     const colors = {
       Development: "from-green-500 to-emerald-600",
@@ -155,7 +223,11 @@ const EventsSection = () => {
       Healthcare: "from-red-500 to-pink-600",
       Education: "from-purple-500 to-violet-600",
       Agriculture: "from-yellow-500 to-orange-600",
-      Technology: "from-cyan-500 to-teal-600"
+      Technology: "from-cyan-500 to-teal-600",
+      Environment: "from-green-600 to-teal-600",
+      Culture: "from-pink-500 to-purple-600",
+      Business: "from-orange-500 to-red-600",
+      Sports: "from-blue-600 to-purple-600"
     };
     return colors[category] || "from-gray-500 to-gray-600";
   };
@@ -230,7 +302,7 @@ const EventsSection = () => {
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600/30 to-red-600/30 backdrop-blur-2xl border border-orange-500/40 rounded-full shadow-2xl mb-8">
             <span className="text-orange-400 font-bold text-lg tracking-wide flex items-center gap-3">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
               </svg>
               EVENTS & NEWS
             </span>
@@ -287,7 +359,7 @@ const EventsSection = () => {
                         {/* Date */}
                         <div className="flex items-center gap-3 text-orange-400">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                           </svg>
                           <span className="font-bold text-lg">{event.date}</span>
                         </div>
@@ -360,32 +432,58 @@ const EventsSection = () => {
             </div>
           </div>
 
-          {/* Premium Thumbnails */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {pastEvents.map((event, index) => (
-              <button
-                key={event.id}
-                onClick={() => goToSlide(index)}
-                className={`relative group overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 ${
-                  index === activeSlide
-                    ? "ring-4 ring-orange-500/60 shadow-2xl shadow-orange-500/30"
-                    : "hover:ring-2 hover:ring-orange-400/40"
-                }`}
+          {/* Premium Horizontal Scrollable Thumbnails */}
+          <div className="mt-8 relative">
+            {/* Scroll Buttons */}
+
+
+            {/* Thumbnails Container */}
+            <div className="px-0">
+              <div
+                ref={thumbnailRef}
+                className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4"
+                style={{
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none',
+                }}
               >
+                {pastEvents.map((event, index) => (
+                  <button
+                    key={event.id}
+                    onClick={() => goToSlide(index)}
+                    className={`relative group overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 flex-none w-40 snap-center ${
+                      index === activeSlide
+                        ? "ring-4 ring-orange-500/60 shadow-2xl shadow-orange-500/30"
+                        : "hover:ring-2 hover:ring-orange-400/40"
+                    }`}
+                  >
+                    <div
+                      className="h-28 bg-cover bg-center"
+                      style={{ backgroundImage: `url(${event.image})` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    {/* Active indicator */}
+                    {index === activeSlide && (
+                      <div className="absolute inset-0 border-2 border-orange-400 rounded-2xl animate-pulse" />
+                    )}
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/20 group-hover:to-transparent transition-all duration-300" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Scroll Indicators */}
+            <div className="flex justify-center mt-4 gap-2">
+              {Array.from({ length: Math.ceil(pastEvents.length / 4) }).map((_, index) => (
                 <div
-                  className="h-24 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${event.image})` }}
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-orange-500/30"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-2 left-2 right-2">
-                  <div className="text-white text-xs font-bold truncate">{event.title}</div>
-                  <div className="text-orange-300 text-xs">{event.date}</div>
-                </div>
-                {index === activeSlide && (
-                  <div className="absolute inset-0 border-2 border-orange-400 rounded-2xl animate-pulse" />
-                )}
-              </button>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
@@ -434,7 +532,7 @@ const EventsSection = () => {
                       <div className="flex items-center gap-4 mb-4">
                         <div className="flex items-center gap-2 text-orange-400">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                           </svg>
                           <span className="font-bold">{event.date}</span>
                         </div>
@@ -540,6 +638,10 @@ const EventsSection = () => {
 
         .rounded-4xl {
           border-radius: 2rem;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>
