@@ -45,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Advanced Dark Particles Background */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Dark Glowing Particles */}
@@ -111,22 +111,31 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2">
             {/* Premium Logo */}
-            <div className="flex items-center space-x-4">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-75"></div>
-                <div className="relative w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
-                  <span className="text-white font-black text-xl tracking-wider">
-                    SH
-                  </span>
-                </div>
-              </div>
+            <div className="flex  items-center space-x-2">
+            <div className="relative sm:hidden">
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-35"></div>
+
+  <div className="relative px-2 h-14 rounded-xl flex items-center justify-center shadow-2xl w-fit">
+    <span className="text-white font-black title text-lg whitespace-nowrap">
+      Shawon Hossain
+    </span>
+  </div>
+</div>
+
               <div className="hidden sm:block">
-                <h1 className="text-2xl font-black text-white tracking-wide">
-                  Shawon Hossain
-                </h1>
-                <p className="text-sm text-orange-400 font-semibold tracking-widest uppercase">
-                  Political Leader
-                </p>
+
+
+<div className="relative">
+  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-25"></div>
+
+  <div className="relative px-8 py-3 rounded-xl flex items-center justify-center shadow-2xl">
+    <h1 className="text-2xl font-black text-white tracking-wide whitespace-nowrap">
+      Shawon Hossain
+    </h1>
+  </div>
+</div>
+
+
               </div>
             </div>
 

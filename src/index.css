@@ -7,6 +7,12 @@ body {
   font-weight: 400;
 }
 
+.title {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

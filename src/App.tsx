@@ -14,8 +14,8 @@ function App() {
     <div>
       <ScrollProgressBar />
       <Header />
-      <AboutSection />
-      <EventsSection />
+      {/* <AboutSection /> */}
+      {/* <EventsSection /> */}
       {/* <GallerySection /> */}
       {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
