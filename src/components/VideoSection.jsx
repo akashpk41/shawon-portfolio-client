@@ -80,7 +80,7 @@ const VideoSection = () => {
         title: "Parliamentary Address on Economic Reform",
         description: "Comprehensive speech on restructuring Bangladesh's economic policies for sustainable growth",
         youtubeId: "3zdCvrbd2ck",
-        thumbnail: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop",
+        thumbnail: "https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/528167948_2043384106470233_2821623954817278859_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEqfLFWxv_GK8w6CJZtc82EG1AONrp_mUcbUA42un-ZR0pEU16uf2VYOhwxpCVMy82kSD5KnS-nbcoiBGC1kIsn&_nc_ohc=XOhyG8P1jj4Q7kNvwGf-Ncp&_nc_oc=AdmsClCXYsUdmxgrDr3kw-0XdX-26x_SGxA2FzDZio_FpLdWEsRtTbikAi5H3rYPcwg&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=AOzcUfPHqwYNHjXk5kk6Lg&oh=00_AfWZYKt8m5-xWW7ngP-ayVoFl14h5znjvlLtZQhyLHX4Uw&oe=68BA62BD",
         duration: "18:42",
         views: "12,543",
         publishDate: "March 10, 2025",
@@ -91,7 +91,7 @@ const VideoSection = () => {
         title: "Youth Leadership Summit Keynote",
         description: "Inspiring address to young leaders about political engagement and social responsibility",
         youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop",
+        thumbnail: "https://scontent.fdac27-2.fna.fbcdn.net/v/t39.30808-6/490415698_1944933966315248_8644017666476395147_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHnjOR5M60YygQuVy3HceKUGbGOdJ10i6QZsY50nXSLpAeX1O-Wwo4Gke2snwte1dQshfItiCqqc1EauP8otw67&_nc_ohc=hPV-aoTUyzYQ7kNvwExbCAN&_nc_oc=AdnTXET_jBjvj97SHmcqHkiPCay-gyG-d4cRBVvxjvI79hhrtGmC0M47kinSteehuyI&_nc_zt=23&_nc_ht=scontent.fdac27-2.fna&_nc_gid=ICx5gnfTz3yiVW2PBmhRyg&oh=00_AfVu2sHsN7p15sQParh368WdbA5pnG66ZCmqqh1MxegwDQ&oe=68BA8534",
         duration: "15:23",
         views: "8,932",
         publishDate: "February 28, 2025",
@@ -102,7 +102,7 @@ const VideoSection = () => {
         title: "Television Interview on Healthcare Policy",
         description: "In-depth discussion about healthcare reforms and universal coverage initiatives",
         youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+        thumbnail: "https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/517314513_2018626185612692_2575090862077467314_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeERykXQfaIxnKeXtKmyRubroI5FLZSO7VGgjkUtlI7tUUSAyXgN3PRwv-ZeSrzw2uLAFc8ssuh8hWhiPe2gTwoR&_nc_ohc=gTmbZUluvPwQ7kNvwF4Lt94&_nc_oc=AdlK4LUMFYxOrz9Gg3JDBafQFnwWbLMfJhIlOivH50Xv_NwofcBrD7en411N_jZNl74&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=mIlEqaoXbr16jLHkBLAe8A&oh=00_AfUxBTidR9gTGZmHeLo7nqE1io3GA-B-261llMT5GWpD3Q&oe=68BA5893",
         duration: "22:15",
         views: "15,672",
         publishDate: "February 20, 2025",
@@ -113,7 +113,7 @@ const VideoSection = () => {
         title: "Press Conference: Anti-Corruption Measures",
         description: "Announcing new transparency initiatives and accountability frameworks",
         youtubeId: "dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop",
+        thumbnail: "https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/490329076_1944934489648529_7936935738186258418_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHUPbdevCk85xAPJro_tIUerom7ek0OoTiuibt6TQ6hOMd1-QQvWzyqY00KuXTwSFTrc9sFL86XPq9BO-4eeu30&_nc_ohc=6PgzPRBo00gQ7kNvwHJl4fp&_nc_oc=AdnwGK4gcN9oPV0Pj0EFL_hZA7Hw_jLKvSThr_ygixx0NfyQyZYi75D0BWjfavQ8_AM&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=ITmcPxL_dLytBHomgaDEuQ&oh=00_AfUKJCDIzt7OPLb4uswPZ3wTCA_uvOY9emZTboL5wiNLVA&oe=68BA76EA",
         duration: "25:48",
         views: "21,234",
         publishDate: "February 15, 2025",
@@ -370,7 +370,7 @@ const VideoSection = () => {
                 <div className="relative aspect-video rounded-3xl overflow-hidden backdrop-blur-3xl bg-gradient-to-br from-black/60 to-gray-900/40 border border-orange-500/40 shadow-2xl">
                   {/* YouTube Thumbnail */}
                   <img
-                    src={`https://img.youtube.com/vi/${featuredVideo.youtubeId}/maxresdefault.jpg`}
+                    src={`https://scontent.fdac27-1.fna.fbcdn.net/v/t39.30808-6/492942913_1958518174956827_1270583043355150440_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF6H351rD33BIeQCoVUFKrvC7PiHdMLtyALs-Id0wu3IF1FSwFGhtf6Fj1s_Dnc3Z_aWc-XtlS5dWjefqw8Wip8&_nc_ohc=JW2HnfdlgF8Q7kNvwHMXRMP&_nc_oc=Adl1v1DwdVqEQ5FU5TRTtAnRaMqGOHX0K8bgWGyYCCizgRve2SZdQkrWxOB-SD9g5a8&_nc_zt=23&_nc_ht=scontent.fdac27-1.fna&_nc_gid=A4X6-o3vE7uvITUfClx8OQ&oh=00_AfU_44mD9jL-f_KEwA0IVSdF_z2Arp2sPuGf8Hm6-WMO5A&oe=68BA8616`}
                     alt={featuredVideo.title}
                     className="w-full h-full object-cover"
                   />
