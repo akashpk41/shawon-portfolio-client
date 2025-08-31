@@ -14,13 +14,13 @@ function App() {
     <div>
       <ScrollProgressBar />
       <Header />
-      {/* <AboutSection /> */}
-      {/* <EventsSection /> */}
-      {/* <GallerySection /> */}
-      {/* <PersonalGallerySection /> */}
-      {/* <VideoSection /> */}
-      {/* <BlogSection /> */}
-      {/* <ContactSection /> */}
+      <AboutSection />
+      <EventsSection />
+      <GallerySection />
+      <PersonalGallerySection />
+      <VideoSection />
+      <BlogSection />
+      <ContactSection />
       <Footer />
     </div>
   )

@@ -11,7 +11,7 @@ const BouncyText = ({ text = "Bouncy Animation" }: { text?: string }) => {
   }, []);
 
   return (
-    <h1 className="text-4xl md:text-7xl lg:text-6xl text-white text-center">
+    <h1 className="text-4xl md:text-5xl font-bold lg:text-5xl text-white text-center">
       {text.split("").map((char, i) => (
         <span
           key={`${animationKey}-${i}`}
@@ -45,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div className="relative pb-60 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Advanced Dark Particles Background */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Dark Glowing Particles */}
@@ -107,7 +107,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-slate-900/30 to-gray-900/50" />
 
       {/* Fixed Premium Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl bg-black/20 border-b border-orange-500/20 shadow-2xl">
+      <nav className="fixed top-0 left-0 right-0 z-4000 backdrop-blur-2xl bg-black/20 border-b border-orange-500/20 shadow-2xl">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2">
             {/* Premium Logo */}
@@ -186,14 +186,14 @@ const Header = () => {
 
         {/* Premium Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden backdrop-blur-2xl bg-black/40 border-b border-orange-500/20 shadow-2xl">
+          <div className="md:hidden backdrop-blur-2xl bg-black/10 border-b border-orange-400/10 shadow-2xl">
             <div className="px-6 py-6 space-y-3">
               {["Home", "Gallery", "Blogs", "About", "Contact"].map(
                 (item, index) => (
                   <a
                     key={item}
                     href={`#${item}`}
-                    className="block px-6 py-4 rounded-xl text-white font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-red-500/20 hover:text-orange-400 border border-transparent hover:border-orange-500/30"
+                    className="block text-center px-6 py-4 rounded-xl text-white font-semibold transition-all duration-300  bg-gradient-to-r  from-orange-500/20  to-red-500/20  hover:text-orange-400 border border-transparent  border-orange-500/30"
                     onClick={() => setIsMobileMenuOpen(false)}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
@@ -219,16 +219,16 @@ const Header = () => {
           >
             <div className="relative">
               {/* Mobile Dark Glowing Elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-3xl backdrop-blur-sm border border-orange-500/40 animate-float shadow-2xl" />
-              <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-gradient-to-r from-yellow-600/30 to-orange-600/30 rounded-full backdrop-blur-sm border border-yellow-500/40 animate-pulse shadow-2xl" />
+              <div className="absolute -top-5 left-10 z-10 w-24 h-24 bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-3xl backdrop-blur-sm border border-orange-500/40 animate-float shadow-2xl" />
+              <div className="absolute  -bottom-12 -right-1 w-20 h-20 bg-gradient-to-r from-yellow-600/30 to-orange-600/30 rounded-full backdrop-blur-sm border border-yellow-500/40 animate-pulse shadow-2xl" />
 
               {/* Mobile Premium Container */}
-              <div className="relative backdrop-blur-3xl bg-gradient-to-br from-black/60 to-gray-900/40 border border-orange-500/30 rounded-4xl p-4 shadow-2xl">
+              <div className="relative backdrop-blur-3xl bg-gradient-to-br from-black/50 to-gray-900/40 border border-orange-500/30 rounded-4xl p-3 shadow-2xl">
                 <div className="relative w-80 h-80 mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-red-500/30 to-yellow-500/40 rounded-4xl blur-2xl" />
                   <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-4xl border border-orange-500/40 flex items-center justify-center overflow-hidden shadow-2xl">
                     <div className="w-full h-full bg-gradient-to-br from-orange-700 to-red-800 rounded-4xl flex items-center justify-center">
-                      <div className="text-8xl text-white font-black drop-shadow-2xl">
+                      <div className="drop-shadow-2xl">
                        <img src="https://i.ibb.co.com/b56xmSCk/shawon.png" alt="" />
                       </div>
                     </div>
@@ -239,10 +239,12 @@ const Header = () => {
                 <div className="mt-8 pb-6 text-center">
                   <div className="space-y-4">
                     <h2 className="text-3xl font-light text-orange-400 tracking-wide">
-                      Welcome to
+                   Hello, I'm
                     </h2>
-                     <span className='text-white text-sm '  ><BouncyText text="SHAWON HOSSAIN" /></span>
-                    <div className="w-48 h-1 mx-auto bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 rounded-full shadow-lg" />
+                     <span className='text-white font-bold text-sm '  >
+                      <BouncyText text="SHAWON HOSSAIN" />
+                      </span>
+                    <div className="w-48 mt-2 h-1 mx-auto bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 rounded-full shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -258,56 +260,45 @@ const Header = () => {
                   : "opacity-0 -translate-x-32"
               }`}
             >
-              {/* Premium Badge */}
-              <div className="text-center md:text-left">
-                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600/30 to-red-600/30 backdrop-blur-2xl border border-orange-500/40 rounded-full shadow-2xl">
-                  <span className="text-orange-400 font-bold flex items-center gap-3 tracking-wide">
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    POLITICAL LEADER & VISIONARY
-                  </span>
-                </div>
-              </div>
 
               {/* Main Premium Title */}
               <div className="space-y-8 text-center md:text-left">
                 <h2 className="text-4xl hidden md:block font-light text-orange-400 tracking-wide">
-                  Meet The Leader
+                 Hello, I'm
                 </h2>
 
                 <div className="hidden md:block">
                   <BouncyText text="SHAWON HOSSAIN" />
                 </div>
 
-                <div className="w-64 h-1 mx-auto md:mx-0 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 rounded-full shadow-lg" />
               </div>
 
               {/* Premium Description */}
-              <div className="backdrop-blur-3xl bg-gradient-to-br from-black/50 to-gray-900/30 border border-orange-500/30 rounded-3xl p-10 shadow-2xl">
-                <p className="text-xl text-gray-100 leading-relaxed tracking-wide">
-                  Leading with{" "}
-                  <span className="text-orange-400 font-black">
-                    unwavering dedication
-                  </span>
-                  ,{" "}
-                  <span className="text-red-400 font-black">
-                    authentic transparency
-                  </span>
-                  , and{" "}
-                  <span className="text-yellow-400 font-black">
-                    visionary leadership
-                  </span>
-                  . Committed to transforming our community through{" "}
-                  <span className="text-orange-400 font-black">
-                    innovative solutions
-                  </span>{" "}
-                  and sustainable progress for generations to come.
-                </p>
+              <div className="backdrop-blur-3xl -mt-15 bg-gradient-to-br from-black/50 to-gray-900/30 border border-orange-500/30 rounded-3xl p-6 shadow-2xl">
+               <p className="text-xl text-gray-100 leading-relaxed tracking-wide">
+  একজন প্রগতিশীল{" "}
+  <span className="text-orange-400 font-black">
+    বাংলাদেশী ছাত্র নেতা
+  </span>{" "}
+  ও{" "}
+  <span className="text-red-400 font-black">
+    রাজনীতিবিদ
+  </span>
+  । পাবনা{" "}
+  <span className="text-yellow-400 font-black">
+    বৈষম্যবিরোধী ছাত্র আন্দোলনের অন্যতম সফল সংগঠক
+  </span>
+  । পাবনা শহরে বিভিন্ন{" "}
+  <span className="text-orange-400 font-black">
+    সামাজিক ও স্বেচ্ছাসেবী কার্যক্রমে সক্রিয়
+  </span>
+  , এবং ভবিষ্যতে রাজনীতির মাধ্যমে সমাজে{" "}
+  <span className="text-red-400 font-black">
+    ইতিবাচক পরিবর্তন
+  </span>{" "}
+  আনাই আসল লক্ষ্য।
+</p>
+
               </div>
 
               {/* Premium CTA Buttons */}
@@ -424,13 +415,13 @@ const Header = () => {
 
       {/* Premium Scroll Indicator */}
       <div
-        className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-all duration-1500 delay-1500 ${
+        className={`absolute bottom-5 left-1/2 transform -translate-x-1/2 transition-all duration-1500 delay-1500 ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
         }`}
       >
         <div className="flex flex-col items-center space-y-5 backdrop-blur-3xl bg-gradient-to-br from-black/40 to-gray-900/30 border border-orange-500/30 rounded-3xl p-6 shadow-2xl">
           <p className="text-base font-bold text-orange-300 tracking-widest uppercase">
-            Explore Journey
+            Explore More
           </p>
           <div className="w-10 h-20 border-3 border-orange-500/60 rounded-full flex justify-center relative">
             <div className="w-3 h-8 bg-gradient-to-b from-orange-400 to-red-400 rounded-full mt-3 animate-pulse shadow-xl" />
