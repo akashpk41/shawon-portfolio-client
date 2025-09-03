@@ -7,6 +7,7 @@ import GallerySection from './components/GallerySection'
 import Header from './components/Header/Header'
 import PersonalGallerySection from './components/PersonalGallerySection'
 import ScrollProgressBar from './components/ScrollProgressBar'
+import TournamentCommitteeSection from './components/TournamentCommitteeSection'
 
 import VideoSection from './components/VideoSection'
 
@@ -16,15 +17,14 @@ function App() {
       {/* <ScrollProgressBar /> */}
       {/* <Header /> */}
       {/* <AboutSection /> */}
-      {/* <TournamentSectionForum /> */}
-      {/* <TournamentSection /> */}
+      <TournamentCommitteeSection />
       {/* <EventsSection /> */}
       {/* <GallerySection /> */}
       {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
       {/* <BlogSection /> */}
-      <ContactSection />
-      <Footer />
+      {/* <ContactSection /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
