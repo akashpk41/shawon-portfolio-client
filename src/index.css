@@ -13,6 +13,12 @@ body {
   font-style: normal;
 }
 
+.tiro-bangla-regular {
+  font-family: "Tiro Bangla", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
