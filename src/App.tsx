@@ -22,9 +22,9 @@ function App() {
       {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
       {/* !! completed !!! */}
-      {/* <BlogSection /> */}
-      {/* <ContactSection /> */}
-      {/* <Footer /> */}
+      <BlogSection />
+      <ContactSection />
+      <Footer />
     </div>
   )
 }

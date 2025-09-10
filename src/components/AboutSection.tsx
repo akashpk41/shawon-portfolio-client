@@ -228,21 +228,15 @@ const AboutSection = () => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
-            Unfolding My Journey
+             My Journey
             </span>
           </div>
-
-         <p className="text-2xl md:text-7xl font-black text-white mb-6 tracking-tight text-center leading-snug">একজন তরুণ নেতার
-  <span className="bg-gradient-to-r ml-2 from-orange-400 via-red-400 to-yellow-400 bg-clip-text text-transparent">
-     জীবন যাত্রা, শিক্ষা, রাজনৈতিক আদর্শ এবং সামাজিক অবদানের বিস্তারিত পরিচয়
-  </span>
-</p>
 
 
         </div>
 
         {/* Hero Bio Section */}
-        <div className="grid md:grid-cols-2 -mt-8 gap-14 items-center mb-32">
+        <div className="grid md:grid-cols-2 -mt-18 gap-14 items-center mb-32">
           {/* Mobile Image */}
           <div
             className={`md:hidden mb-12 transform transition-all duration-1200 delay-300 ${
