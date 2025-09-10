@@ -22,10 +22,10 @@ const BlogSection = () => {
       content: "গণতন্ত্র শুধু একটি রাজনৈতিক ব্যবস্থা নয়, এটি একটি জীবনযাত্রার পদ্ধতি। আমাদের দেশে গণতান্ত্রিক প্রতিষ্ঠানগুলোর শক্তিশালীকরণ এবং স্বচ্ছতা বৃদ্ধির মাধ্যমে জনগণের কাছে জবাবদিহিতা নিশ্চিত করতে হবে।",
       author: "শাওন হোসেন",
       publishDate: "২৮ আগস্ট ২০২৫",
-      readTime: "৮ মিনিট",
+      readTime: "১ মিনিট",
       category: "Politics",
       tags: ["রাজনীতি", "সংস্কার", "গণতন্ত্র", "উন্নয়ন"],
-      image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=500&fit=crop",
+      image: "https://i.ibb.co.com/vxG78PNQ/518276804-2018625852279392-4450974725976609330-n.jpg",
       featured: true,
       views: "১২৫০",
       likes: "৮৯"
@@ -38,10 +38,10 @@ const BlogSection = () => {
       content: "আমাদের দেশের মোট জনসংখ্যার একটি বিশাল অংশ তরুণ। এই তরুণ শক্তিকে সঠিকভাবে কাজে লাগাতে পারলে আমরা একটি সমৃদ্ধ ও টেকসই ভবিষ্যত নিশ্চিত করতে পারি।",
       author: "শাওন হোসেন",
       publishDate: "২৫ আগস্ট ২০২৫",
-      readTime: "৬ মিনিট",
+      readTime: "১ মিনিট",
       category: "Youth Development",
       tags: ["যুব উন্নয়ন", "শিক্ষা", "কর্মসংস্থান", "নেতৃত্ব"],
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop",
+      image: "https://i.ibb.co.com/84g2TN38/517717042-2018626632279314-6576925167024189668-n.jpg",
       featured: false,
       views: "৯৮৫",
       likes: "৭২"
@@ -54,10 +54,10 @@ const BlogSection = () => {
       content: "পাবনা জেলার ভৌগোলিক অবস্থান এবং প্রাকৃতিক সম্পদের কথা বিবেচনা করলে এই অঞ্চলে একটি শক্তিশালী স্থানীয় অর্থনীতি গড়ে তোলার অসীম সম্ভাবনা রয়েছে।",
       author: "শাওন হোসেন",
       publishDate: "২০ আগস্ট ২০২৫",
-      readTime: "১০ মিনিট",
+      readTime: "১ মিনিট",
       category: "Economics",
       tags: ["অর্থনীতি", "স্থানীয় উন্নয়ন", "কৃষি", "শিল্প"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68e2c6b7d3?w=800&h=500&fit=crop",
+      image: "https://i.ibb.co.com/jk5TtY1F/508146888-2000187904123187-9147168598433342044-n.jpg",
       featured: false,
       views: "১১২০",
       likes: "৯৫"
@@ -65,7 +65,7 @@ const BlogSection = () => {
   ];
 
   const categories = [
-    { id: "all", name: "সকল", count: blogPosts.length },
+    { id: "all", name: "All", count: blogPosts.length },
     { id: "Politics", name: "রাজনীতি", count: blogPosts.filter(post => post.category === "Politics").length },
     { id: "Youth Development", name: "যুব উন্নয়ন", count: blogPosts.filter(post => post.category === "Youth Development").length },
     { id: "Economics", name: "অর্থনীতি", count: blogPosts.filter(post => post.category === "Economics").length }
@@ -98,7 +98,7 @@ const BlogSection = () => {
   const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
-    <div id="Blogs" className="relative py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div id="Blogs" className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Enhanced Blog Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Blog-themed Particles */}
@@ -182,12 +182,12 @@ const BlogSection = () => {
           }`}
         >
           <div className="backdrop-blur-3xl bg-gradient-to-br from-black/60 to-gray-900/40 border border-orange-500/30 rounded-3xl p-3 shadow-2xl">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-around gap-2">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`relative px-6 py-3 rounded-2xl font-bold transition-all duration-500 ${
+                  className={`relative cursor-pointer px-6 py-3 rounded-2xl font-bold transition-all duration-500 ${
                     activeCategory === category.id
                       ? "bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-2xl"
                       : "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-orange-600/20 hover:to-red-600/20"
@@ -217,7 +217,7 @@ const BlogSection = () => {
             }`}
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-black text-orange-400 mb-4">ফিচার্ড আর্টিকেল</h3>
+              <h3 className="text-4xl font-black text-orange-400 mb-4">ফিচার্ড আর্টিকেল</h3>
               <div className="w-24 h-1 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
             </div>
 
@@ -260,18 +260,18 @@ const BlogSection = () => {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="text-sm font-semibold">{featuredPost.publishDate}</span>
+                        <span className="text-base font-semibold">{featuredPost.publishDate}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span className="text-sm font-semibold">{featuredPost.readTime} পড়তে</span>
+                        <span className="text-base font-semibold">{featuredPost.readTime} পড়তে</span>
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-3xl lg:text-4xl font-black text-white mb-6 leading-tight group-hover:text-orange-300 transition-colors duration-300">
+                    <h3 className="text-3xl lg:text-4xl font-black text-green-400 mb-6 leading-tight group-hover:text-orange-300 transition-colors duration-300">
                       {featuredPost.title}
                     </h3>
 
@@ -368,19 +368,19 @@ const BlogSection = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-black text-white mb-3 leading-tight group-hover:text-orange-300 transition-colors duration-300">
+                    <h3 className="text-2xl font-black text-green-400 mb-3 leading-tight group-hover:text-orange-300 transition-colors duration-300">
                       {post.title}
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    <p className="text-gray-300 text-base leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.slice(0, 2).map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded-full">
+                        <span key={tagIndex} className="px-2 py-1 bg-orange-500/20 text-orange-400 text-sm rounded-full">
                           #{tag}
                         </span>
                       ))}
@@ -394,19 +394,19 @@ const BlogSection = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                           </svg>
-                          <span className="text-xs">{post.views}</span>
+                          <span className="text-base">{post.views}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                           </svg>
-                          <span className="text-xs">{post.likes}</span>
+                          <span className="text-base">{post.likes}</span>
                         </div>
                       </div>
 
                       {/* Read More */}
                       <div className="px-3 py-1 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full group-hover:from-orange-500/40 group-hover:to-red-500/40 transition-all duration-300">
-                        <span className="text-orange-400 text-xs font-bold">পড়ুন</span>
+                        <span className="text-orange-400 text-base font-bold">Read More</span>
                       </div>
                     </div>
                   </div>
@@ -427,7 +427,7 @@ const BlogSection = () => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              আরও ব্লগ দেখুন
+           Load More Blogs
             </span>
           </button>
         </div>
@@ -435,7 +435,7 @@ const BlogSection = () => {
 
       {/* Premium Blog Modal */}
       {isModalOpen && selectedBlog && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-2xl">
+        <div className="fixed inset-0 z-10000 flex items-center justify-center p-0 bg-black/80 backdrop-blur-2xl">
           <div className="relative max-w-4xl w-full max-h-[90vh] overflow-y-auto backdrop-blur-3xl bg-gradient-to-br from-black/90 to-gray-900/70 border border-orange-500/40 rounded-4xl shadow-2xl">
 
             {/* Close Button */}
@@ -455,7 +455,7 @@ const BlogSection = () => {
                 alt={selectedBlog.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
 
               {/* Category Badge */}
               <div className={`absolute top-6 left-6 px-4 py-2 bg-gradient-to-r ${getCategoryColor(selectedBlog.category)} rounded-full shadow-xl`}>
@@ -557,10 +557,17 @@ const BlogSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-white/10">
                 <button className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl font-bold text-white shadow-xl hover:scale-105 transition-all duration-300">
                   <span className="flex items-center justify-center gap-3">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                    </svg>
-                    শেয়ার করুন
+                    <svg
+  className="w-5 h-5"
+  fill="currentColor"
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+  role="img"
+>
+  <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.675V1.325C24 .593 23.407 0 22.675 0z"/>
+</svg>
+
+                   Share
                   </span>
                 </button>
 
@@ -569,7 +576,7 @@ const BlogSection = () => {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
-                    পছন্দ ({selectedBlog.likes})
+                    Like ({selectedBlog.likes})
                   </span>
                 </button>
 
@@ -578,7 +585,7 @@ const BlogSection = () => {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                     </svg>
-                    সংরক্ষণ
+                   Save
                   </span>
                 </button>
               </div>
