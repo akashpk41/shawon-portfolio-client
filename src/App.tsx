@@ -16,14 +16,15 @@ function App() {
     <div>
       <ScrollProgressBar />
       <Header />
-      {/* <AboutSection /> */}
+      <AboutSection />
       {/* <EventsSection /> */}
       {/* <GallerySection /> */}
       {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
-      <BlogSection />
+      {/* !! completed !!! */}
+      {/* <BlogSection /> */}
       {/* <ContactSection /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
