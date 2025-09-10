@@ -302,7 +302,7 @@ const AboutSection = () => {
                     <p className="text-2xl font-semibold text-orange-300">রাজনৈতিক পরিচয়</p>
                     <p className="text-xl text-gray-300 leading-relaxed">
                       <span className="text-red-400 font-bold">বৈষম্যবিরোধী ছাত্র আন্দোলনের</span> অন্যতম নেতা এবং
-                      <span className="text-yellow-400 font-bold"> বাংলাদেশ গণতান্ত্রিক ছাত্রসংসদের</span> প্রতিষ্ঠাতা সদস্য সচিব।
+                      <span className="text-yellow-400 font-bold"> বাংলাদেশ গণতান্ত্রিক ছাত্রসংসদ পাবনা জেলার </span> প্রতিষ্ঠাতা সদস্য সচিব।
                     </p>
                   </div>
                 </div>

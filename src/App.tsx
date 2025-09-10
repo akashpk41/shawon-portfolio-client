@@ -5,6 +5,7 @@ import EventsSection from './components/EventsSection'
 import Footer from './components/Footer'
 import GallerySection from './components/GallerySection'
 import Header from './components/Header/Header'
+import MediaSection from './components/MediaSection'
 import PersonalGallerySection from './components/PersonalGallerySection'
 import ScrollProgressBar from './components/ScrollProgressBar'
 
@@ -22,9 +23,10 @@ function App() {
       {/* <PersonalGallerySection /> */}
       {/* <VideoSection /> */}
       {/* !! completed !!! */}
-      <BlogSection />
-      <ContactSection />
-      <Footer />
+      {/* <BlogSection /> */}
+      {/* <MediaSection /> */}
+      {/* <ContactSection /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
