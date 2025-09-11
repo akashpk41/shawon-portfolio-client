@@ -50,69 +50,272 @@ const EventsSection = () => {
       });
     }
   }, [activeSlide]);
-
-  const pastEvents = [
-    {
-      id: 1,
-      title: "Community Development Program",
-      date: "07-March-2025",
-      location: "Pabna District",
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
-      description: "Successful completion of rural development initiative",
-      attendees: "500+",
-      category: "Development"
-    },
-    {
-      id: 2,
-      title: "Youth Leadership Summit",
-      date: "25-February-2025",
-      location: "Rajshahi Division",
-      image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
-      description: "Empowering young leaders for future Bangladesh",
-      attendees: "300+",
-      category: "Leadership"
-    },
-    {
-      id: 3,
-      title: "Healthcare Awareness Campaign",
-      date: "18-February-2025",
-      location: "Pabna Medical College",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      description: "Free health checkup and awareness program",
-      attendees: "800+",
-      category: "Healthcare"
-    },
-    {
-      id: 4,
-      title: "Education Reform Discussion",
-      date: "10-February-2025",
-      location: "Pabna University",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
-      description: "Dialogue on modernizing education system",
-      attendees: "200+",
-      category: "Education"
-    },
-    {
-      id: 5,
-      title: "Agricultural Innovation Fair",
-      date: "01-February-2025",
-      location: "Pabna Agricultural Center",
-      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&h=600&fit=crop",
-      description: "Promoting modern farming techniques",
-      attendees: "1000+",
-      category: "Agriculture"
-    },
-    {
-      id: 6,
-      title: "Digital Bangladesh Workshop",
-      date: "28-January-2025",
-      location: "IT Training Center",
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=600&fit=crop",
-      description: "Technology advancement for rural communities",
-      attendees: "150+",
-      category: "Technology"
-    }
-  ];
+const pastEvents = [
+  {
+    id: 1,
+    date: "2025-02-14",
+    image: "https://i.ibb.co/TxMRk7fc/Whats-App-Image-2025-08-30-at-14-15-12-ad57fa00.jpg",
+    description: "Local youth gathering for sports and unity.",
+  },
+  {
+    id: 2,
+    date: "2025-03-09",
+    image: "https://i.ibb.co/jvhXn75v/Whats-App-Image-2025-08-30-at-14-15-13-e02a1aea.jpg",
+    description: "Free health check-up camp organized.",
+  },
+  {
+    id: 3,
+    date: "2025-01-22",
+    image: "https://i.ibb.co/QF3hZNsC/Whats-App-Image-2025-08-30-at-14-15-32-0fc1f2c1.jpg",
+    description: "Tree planting drive held in the community park.",
+  },
+  {
+    id: 4,
+    date: "2025-05-05",
+    image: "https://i.ibb.co/20VHmThr/Whats-App-Image-2025-08-30-at-14-15-33-0e7be5c4.jpg",
+    description: "Art and culture festival celebrated with joy.",
+  },
+  {
+    id: 5,
+    date: "2025-06-16",
+    image: "https://i.ibb.co/QvPtHWp2/Whats-App-Image-2025-08-30-at-14-15-35-8f553f51.jpg",
+    description: "Skill development training for local women.",
+  },
+  {
+    id: 6,
+    date: "2025-04-25",
+    image: "https://i.ibb.co/Xrp5fTYj/Whats-App-Image-2025-08-30-at-14-15-37-31ead718.jpg",
+    description: "Village clean-up campaign involving school children.",
+  },
+  {
+    id: 7,
+    date: "2025-07-12",
+    image: "https://i.ibb.co/M513JZ07/Whats-App-Image-2025-08-30-at-14-15-32-c9c91eea.jpg",
+    description: "Women's day event with awareness sessions.",
+  },
+  {
+    id: 8,
+    date: "2025-01-18",
+    image: "https://i.ibb.co/CpJmLGJN/Whats-App-Image-2025-08-30-at-14-15-33-bfa252ff.jpg",
+    description: "Medical outreach for elderly citizens.",
+  },
+  {
+    id: 9,
+    date: "2025-03-30",
+    image: "https://i.ibb.co/7xYrL1GN/Whats-App-Image-2025-08-30-at-14-15-35-b826ece2.jpg",
+    description: "Cultural performance night by local artists.",
+  },
+  {
+    id: 10,
+    date: "2025-02-28",
+    image: "https://i.ibb.co/sv0jQKRS/Whats-App-Image-2025-08-30-at-14-15-36-6ed4af93.jpg",
+    description: "Educational awareness rally held successfully.",
+  },
+  {
+    id: 11,
+    date: "2025-05-10",
+    image: "https://i.ibb.co/PG1kFTDv/Whats-App-Image-2025-08-30-at-14-15-38-872e61db.jpg",
+    description: "Annual sports day with full community participation.",
+  },
+  {
+    id: 12,
+    date: "2025-06-02",
+    image: "https://i.ibb.co/d0V3WLR4/Whats-App-Image-2025-08-30-at-14-15-30-97dd0c3b.jpg",
+    description: "Disaster preparedness workshop organized.",
+  },
+  {
+    id: 13,
+    date: "2025-03-12",
+    image: "https://i.ibb.co/bgD9Hgqx/Whats-App-Image-2025-08-30-at-14-15-34-121af914.jpg",
+    description: "Agricultural technology demo for farmers.",
+  },
+  {
+    id: 14,
+    date: "2025-07-21",
+    image: "https://i.ibb.co/TB2X0kmN/Whats-App-Image-2025-08-30-at-14-15-34-3867b38b.jpg",
+    description: "Summer youth camp kicked off with excitement.",
+  },
+  {
+    id: 15,
+    date: "2025-02-20",
+    image: "https://i.ibb.co/RTdD7cS6/Whats-App-Image-2025-08-30-at-14-15-12-85e8440d.jpg",
+    description: "Handicraft exhibition by local artisans.",
+  },
+  {
+    id: 16,
+    date: "2025-01-30",
+    image: "https://i.ibb.co/xSnJf8v5/Whats-App-Image-2025-08-30-at-14-15-13-45681fe7.jpg",
+    description: "Book donation program at local schools.",
+  },
+  {
+    id: 17,
+    date: "2025-08-01",
+    image: "https://i.ibb.co/rGqxrjj5/Whats-App-Image-2025-08-30-at-14-15-30-4c0fa06d.jpg",
+    description: "Celebration of local heritage and traditions.",
+  },
+  {
+    id: 18,
+    date: "2025-06-30",
+    image: "https://i.ibb.co/zhyspxJL/Whats-App-Image-2025-08-30-at-14-15-35-26f3b111.jpg",
+    description: "Child education awareness rally organized.",
+  },
+  {
+    id: 19,
+    date: "2025-04-14",
+    image: "https://i.ibb.co/v4wSrYmL/Whats-App-Image-2025-08-30-at-14-15-33-171f58f2.jpg",
+    description: "Evening cultural mela with food stalls.",
+  },
+  {
+    id: 20,
+    date: "2025-02-05",
+    image: "https://i.ibb.co/KcpH1kS6/Whats-App-Image-2025-08-30-at-14-15-34-4a085801.jpg",
+    description: "Free library setup inaugurated by volunteers.",
+  },
+  {
+    id: 21,
+    date: "2025-07-07",
+    image: "https://i.ibb.co/FbdP8LGz/Whats-App-Image-2025-08-30-at-14-15-36-8023b6c0.jpg",
+    description: "Nutrition awareness camp held in the village.",
+  },
+  {
+    id: 22,
+    date: "2025-03-22",
+    image: "https://i.ibb.co/DPF8sMJy/Whats-App-Image-2025-08-30-at-14-15-38-9152f561.jpg",
+    description: "Vocational training course completed successfully.",
+  },
+  {
+    id: 23,
+    date: "2025-05-15",
+    image: "https://i.ibb.co/NdTzRPy6/Whats-App-Image-2025-08-30-at-14-15-32-52a69ffa.jpg",
+    description: "Community theater performance attracting crowds.",
+  },
+  {
+    id: 24,
+    date: "2025-04-26",
+    image: "https://i.ibb.co/zVRhtQBw/Whats-App-Image-2025-08-30-at-14-15-37-522ce0c9.jpg",
+    description: "Local farmers market launched with fresh produce.",
+  },
+  {
+    id: 25,
+    date: "2025-01-14",
+    image: "https://i.ibb.co/cKMv2PJd/Whats-App-Image-2025-08-30-at-14-15-37-e4c06504.jpg",
+    description: "Workshop on women’s rights and safety conducted.",
+  },
+  {
+    id: 26,
+    date: "2025-02-18",
+    image: "https://i.ibb.co/vCLyC6Kk/Whats-App-Image-2025-08-30-at-14-15-31-ed84bb10.jpg",
+    description: "Sports tournament finals played in the community stadium.",
+  },
+  {
+    id: 27,
+    date: "2025-06-09",
+    image: "https://i.ibb.co/FbCz4SRC/Whats-App-Image-2025-08-30-at-14-15-32-d0ee4a8c.jpg",
+    description: "Local library reading program launched.",
+  },
+  {
+    id: 28,
+    date: "2025-07-19",
+    image: "https://i.ibb.co/231hLM9R/Whats-App-Image-2025-08-30-at-14-15-34-b9ecfa7e.jpg",
+    description: "Clean drinking water project inauguration.",
+  },
+  {
+    id: 29,
+    date: "2025-03-27",
+    image: "https://i.ibb.co/99nqQ4Gb/Whats-App-Image-2025-08-30-at-14-15-31-4b30d237.jpg",
+    description: "Youth leadership seminar with active participation.",
+  },
+  {
+    id: 30,
+    date: "2025-05-29",
+    image: "https://i.ibb.co/PGjRGYkh/Whats-App-Image-2025-08-30-at-14-15-31-a1bdfaf2.jpg",
+    description: "Annual cultural fair attracting visitors from nearby towns.",
+  },
+  {
+    id: 31,
+    date: "2025-01-20",
+    image: "https://i.ibb.co/KxwNyw50/Whats-App-Image-2025-08-30-at-14-15-36-457cd27e.jpg",
+    description: "Healthcare awareness rally by local volunteers.",
+  },
+  {
+    id: 32,
+    date: "2025-06-14",
+    image: "https://i.ibb.co/bD3Z4bs/Whats-App-Image-2025-08-30-at-14-15-39-7a8f7525.jpg",
+    description: "Vocational fair showcasing local crafts and skills.",
+  },
+  {
+    id: 33,
+    date: "2025-02-11",
+    image: "https://i.ibb.co/MxCDPR4t/Whats-App-Image-2025-08-30-at-14-15-40-b50bcb70.jpg",
+    description: "School renovation completed with community support.",
+  },
+  {
+    id: 34,
+    date: "2025-04-03",
+    image: "https://i.ibb.co/JWHt1fD9/Whats-App-Image-2025-08-30-at-14-15-40-f1b944bc.jpg",
+    description: "Local sports club celebrates its anniversary.",
+  },
+  {
+    id: 35,
+    date: "2025-05-20",
+    image: "https://i.ibb.co/5x4bfBcs/Whats-App-Image-2025-08-30-at-14-15-39-b866f8ac.jpg",
+    description: "Food festival showcasing regional delicacies.",
+  },
+  {
+    id: 36,
+    date: "2025-07-28",
+    image: "https://i.ibb.co/9M2KPjT/Whats-App-Image-2025-08-30-at-14-15-39-c7e199b7.jpg",
+    description: "Environmental awareness campaign with workshops.",
+  },
+  {
+    id: 37,
+    date: "2025-03-15",
+    image: "https://i.ibb.co/9XYDSmn/Whats-App-Image-2025-08-30-at-14-15-40-8f40139a.jpg",
+    description: "Local music concert performed by young talents.",
+  },
+  {
+    id: 38,
+    date: "2025-01-05",
+    image: "https://i.ibb.co/qF3rZXWf/Whats-App-Image-2025-08-30-at-14-15-40-c4526be3.jpg",
+    description: "Training session on sustainable farming practices.",
+  },
+  {
+    id: 39,
+    date: "2025-06-22",
+    image: "https://i.ibb.co/hRk4Stmh/490415698-1944933966315248-8644017666476395147-n.jpg",
+    description: "Community meeting to discuss infrastructure improvements.",
+  },
+  {
+    id: 40,
+    date: "2025-07-03",
+    image: "https://i.ibb.co/RTvZ3bhD/490089008-1944934032981908-8187603105754203694-n.jpg",
+    description: "Children's art competition encouraging creativity.",
+  },
+  {
+    id: 41,
+    date: "2025-02-24",
+    image: "https://i.ibb.co/KpsLKdyt/490598938-1944934289648549-6555302484938128254-n.jpg",
+    description: "Health and hygiene awareness program in schools.",
+  },
+  {
+    id: 42,
+    date: "2025-04-17",
+    image: "https://i.ibb.co/MD18tBHs/490329076-1944934489648529-7936935738186258418-n.jpg",
+    description: "Village festival with traditional food and dance.",
+  },
+  {
+    id: 43,
+    date: "2025-03-07",
+    image: "https://i.ibb.co/TxMRk7fc/Whats-App-Image-2025-08-30-at-14-15-12-ad57fa00.jpg",
+    description: "Community service day with neighborhood cleanups.",
+  },
+  {
+    id: 44,
+    date: "2025-05-08",
+    image: "https://i.ibb.co/jvhXn75v/Whats-App-Image-2025-08-30-at-14-15-13-e02a1aea.jpg",
+    description: "Local business fair boosting economic growth.",
+  },
+];
 
   const nextSlide = () => {
     setActiveSlide((prev) => (prev + 1) % pastEvents.length);
@@ -303,7 +506,7 @@ const EventsSection = () => {
                     <div className="relative h-full w-full">
                       {/* Background Image */}
                       <div
-                        className="absolute inset-0 bg-cover bg-center"
+                        className="absolute inset-0  bg-contain bg-no-repeat bg-center"
                         style={{ backgroundImage: `url(${event.image})` }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
@@ -311,15 +514,11 @@ const EventsSection = () => {
                       {/* Content */}
                       <div className="relative h-full flex items-end p-12">
                         <div className="space-y-6">
-                          {/* Title */}
-                          <h4 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                            {event.title}
-                          </h4>
 
                           {/* Description */}
-                          <p className="text-base text-gray-200 leading-relaxed max-w-2xl">
+                          {/* <p className="text-base text-gray-200 leading-relaxed max-w-2xl">
                             {event.description}
-                          </p>
+                          </p> */}
 
                           {/* Event Details */}
                           <div className="flex flex-wrap gap-6 text-sm">
@@ -331,30 +530,9 @@ const EventsSection = () => {
                               <span className="font-bold text-lg">{event.date}</span>
                             </div>
 
-                            {/* Location */}
-                            <div className="flex items-center gap-3 text-blue-400">
-                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                              </svg>
-                              <span className="font-bold">{event.location}</span>
-                            </div>
-
-                            {/* Attendees */}
-                            <div className="flex items-center gap-3 text-green-400">
-                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                              </svg>
-                              <span className="font-bold">{event.attendees} Participants</span>
-                            </div>
                           </div>
 
-                          {/* Category Badge */}
-                          <div className="inline-flex">
-                            <span className={`px-4 py-2 rounded-full text-white font-bold text-sm bg-gradient-to-r ${getCategoryColor(event.category)} shadow-lg`}>
-                              {event.category}
-                            </span>
-                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -425,12 +603,6 @@ const EventsSection = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                      {/* Event Title */}
-                      <div className="absolute bottom-2 left-2 right-2">
-                        <p className="text-white text-xs font-bold leading-tight line-clamp-2">
-                          {event.title}
-                        </p>
-                      </div>
 
                       {/* Active indicator */}
                       {index === activeSlide && (
