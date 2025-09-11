@@ -22,13 +22,34 @@ const EventsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto-rotate upcoming events
+  // Auto-scroll thumbnails to keep active thumbnail visible
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveUpcoming((prev) => (prev + 1) % upcomingEvents.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    if (thumbnailRef.current) {
+      const thumbnailContainer = thumbnailRef.current;
+      const thumbnailWidth = 160 + 16; // 40 (w-40) * 4 (1rem = 4px) + gap
+      const containerWidth = thumbnailContainer.clientWidth;
+      const visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+
+      // Calculate the scroll position to center the active thumbnail
+      let targetScrollLeft;
+
+      if (activeSlide < visibleThumbnails / 2) {
+        // If active slide is near the beginning, scroll to start
+        targetScrollLeft = 0;
+      } else if (activeSlide >= pastEvents.length - visibleThumbnails / 2) {
+        // If active slide is near the end, scroll to end
+        targetScrollLeft = thumbnailContainer.scrollWidth - containerWidth;
+      } else {
+        // Center the active thumbnail
+        targetScrollLeft = (activeSlide - Math.floor(visibleThumbnails / 2)) * thumbnailWidth;
+      }
+
+      thumbnailContainer.scrollTo({
+        left: targetScrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  }, [activeSlide]);
 
   const pastEvents = [
     {
@@ -168,6 +189,15 @@ const EventsSection = () => {
         .animate-pulse {
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+
+        /* Hide scrollbar but allow scrolling */
+        .thumbnail-container::-webkit-scrollbar {
+          display: none;
+        }
+        .thumbnail-container {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
       `}</style>
 
       <div className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden" data-events-section="true">
@@ -281,44 +311,49 @@ const EventsSection = () => {
                       {/* Content */}
                       <div className="relative h-full flex items-end p-12">
                         <div className="space-y-6">
-                          {/* Category Badge */}
-                          <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${getCategoryColor(event.category)} rounded-full shadow-xl`}>
-                            <span className="text-white font-bold text-sm tracking-wide">{event.category}</span>
-                          </div>
-
-                          {/* Date */}
-                          <div className="flex items-center gap-3 text-orange-400">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span className="font-bold text-lg">{event.date}</span>
-                          </div>
-
                           {/* Title */}
                           <h4 className="text-4xl md:text-5xl font-black text-white leading-tight">
                             {event.title}
                           </h4>
 
                           {/* Description */}
-                          <p className="text-xl text-gray-200 leading-relaxed max-w-2xl">
+                          <p className="text-base text-gray-200 leading-relaxed max-w-2xl">
                             {event.description}
                           </p>
 
-                          {/* Stats */}
-                          <div className="flex items-center gap-6">
-                            <div className="flex items-center gap-2">
-                              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          {/* Event Details */}
+                          <div className="flex flex-wrap gap-6 text-sm">
+                            {/* Date */}
+                            <div className="flex items-center gap-3 text-orange-400">
+                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                              </svg>
+                              <span className="font-bold text-lg">{event.date}</span>
+                            </div>
+
+                            {/* Location */}
+                            <div className="flex items-center gap-3 text-blue-400">
+                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                               </svg>
-                              <span className="text-gray-300 font-semibold">{event.location}</span>
+                              <span className="font-bold">{event.location}</span>
                             </div>
-                            <div className="flex items-center gap-2">
-                              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                            {/* Attendees */}
+                            <div className="flex items-center gap-3 text-green-400">
+                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                               </svg>
-                              <span className="text-gray-300 font-semibold">{event.attendees} Attendees</span>
+                              <span className="font-bold">{event.attendees} Participants</span>
                             </div>
+                          </div>
+
+                          {/* Category Badge */}
+                          <div className="inline-flex">
+                            <span className={`px-4 py-2 rounded-full text-white font-bold text-sm bg-gradient-to-r ${getCategoryColor(event.category)} shadow-lg`}>
+                              {event.category}
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -330,7 +365,7 @@ const EventsSection = () => {
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-20"
+                className="absolute left-2 md:left-6 cursor-pointer top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-20"
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -339,7 +374,7 @@ const EventsSection = () => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-20"
+                className="absolute right-2 md:right-6 cursor-pointer top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-20"
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -362,43 +397,23 @@ const EventsSection = () => {
               </div>
             </div>
 
-            {/* Premium Thumbnails - Horizontal Scroll */}
+            {/* Premium Thumbnails - Auto-Scrolling */}
             <div className="relative mt-8">
-              {/* Scroll Buttons */}
-              <button
-                onClick={() => scrollThumbnails('left')}
-                className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-30"
-              >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                onClick={() => scrollThumbnails('right')}
-                className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-orange-500/80 to-red-500/80 backdrop-blur-xl border border-orange-500/50 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 z-30"
-              >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
               {/* Thumbnails Container */}
-              <div className="px-16">
+              <div className="px-1">
                 <div
                   ref={thumbnailRef}
-                  className="flex gap-4 overflow-x-auto pb-4"
+                  className="thumbnail-container flex gap-4 overflow-x-auto pb-4"
                   style={{
                     scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
-                    WebkitScrollbar: 'none'
+                    msOverflowStyle: 'none'
                   }}
                 >
                   {pastEvents.map((event, index) => (
                     <button
                       key={event.id}
                       onClick={() => goToSlide(index)}
-                      className={`relative group overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 flex-none w-40 ${
+                      className={`relative cursor-pointer group overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 flex-none w-40 ${
                         index === activeSlide
                           ? "ring-4 ring-orange-500/60 shadow-2xl shadow-orange-500/30"
                           : "hover:ring-2 hover:ring-orange-400/40"
@@ -410,15 +425,11 @@ const EventsSection = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                      {/* Category Badge */}
-                      <div className={`absolute top-2 left-2 px-2 py-1 bg-gradient-to-r ${getCategoryColor(event.category)} rounded-full`}>
-                        <span className="text-white text-xs font-bold">{event.category}</span>
-                      </div>
-
-                      {/* Event Info */}
+                      {/* Event Title */}
                       <div className="absolute bottom-2 left-2 right-2">
-                        <div className="text-white text-xs font-bold truncate">{event.title}</div>
-                        <div className="text-orange-300 text-xs truncate">{event.date}</div>
+                        <p className="text-white text-xs font-bold leading-tight line-clamp-2">
+                          {event.title}
+                        </p>
                       </div>
 
                       {/* Active indicator */}
@@ -444,21 +455,17 @@ const EventsSection = () => {
                 </div>
               </div>
 
-              {/* Scroll Indicators */}
-              <div className="flex justify-center mt-6 gap-2">
-                {Array.from({ length: Math.ceil(pastEvents.length / 4) }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="w-2 h-2 rounded-full bg-orange-500/30 transition-all duration-300 hover:bg-orange-500/50"
-                  />
-                ))}
+              {/* Current Slide Indicator */}
+              <div className="flex justify-center mt-4">
+                <div className="px-4 py-2 bg-gradient-to-r from-orange-600/30 to-red-600/30 backdrop-blur-xl border border-orange-500/40 rounded-full">
+                  <span className="text-orange-400 font-bold text-sm">
+                    {activeSlide + 1} / {pastEvents.length}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-
-
         </div>
-
       </div>
     </>
   );

@@ -421,7 +421,7 @@ const BlogSection = () => {
 
         {/* Load More Button */}
         <div className="text-center mt-16">
-          <button className="group relative px-12 py-4 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 rounded-2xl font-black text-white shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-500 overflow-hidden">
+          <button className="group cursor-pointer relative px-12 py-4 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 rounded-2xl font-black text-white shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-500 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <span className="relative flex items-center gap-3 text-lg">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -441,7 +441,7 @@ const BlogSection = () => {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-6 right-6 z-20 w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
+              className="absolute cursor-pointer top-6 right-6 z-20 w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
             >
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -555,7 +555,7 @@ const BlogSection = () => {
 
               {/* Share & Actions */}
               <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-white/10">
-                <button className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl font-bold text-white shadow-xl hover:scale-105 transition-all duration-300">
+                <button className="flex-1 cursor-pointer px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl font-bold text-white shadow-xl hover:scale-105 transition-all duration-300">
                   <span className="flex items-center justify-center gap-3">
                     <svg
   className="w-5 h-5"
@@ -571,7 +571,7 @@ const BlogSection = () => {
                   </span>
                 </button>
 
-                <button className="flex-1 px-6 py-4 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transition-all duration-300">
+                <button className="flex-1 cursor-pointer px-6 py-4 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transition-all duration-300">
                   <span className="flex items-center justify-center gap-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -580,7 +580,7 @@ const BlogSection = () => {
                   </span>
                 </button>
 
-                <button className="flex-1 px-6 py-4 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transition-all duration-300">
+                <button className="flex-1 cursor-pointer px-6 py-4 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transition-all duration-300">
                   <span className="flex items-center justify-center gap-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
