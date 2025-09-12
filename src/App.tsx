@@ -18,10 +18,10 @@ function App() {
       {/* <ScrollProgressBar /> */}
       {/* <Header /> */}
       {/* <AboutSection /> */}
-      <EventsSection />
+      {/* <EventsSection /> */}
       {/* <GallerySection /> */}
       <PersonalGallerySection />
-      {/* <VideoSection /> */}
+      <VideoSection />
       {/* !! completed !!! */}
       {/* <BlogSection /> */}
       {/* <MediaSection /> */}
