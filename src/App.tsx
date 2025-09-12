@@ -19,12 +19,12 @@ function App() {
       <Header />
       <AboutSection />
       <EventsSection />
-      {/* <GallerySection /> */}
+      <GallerySection />
       <PersonalGallerySection />
       <VideoSection />
       {/* !! completed !!! */}
       <BlogSection />
-      {/* <MediaSection /> */}
+      <MediaSection />
       <ContactSection />
       <Footer />
     </div>

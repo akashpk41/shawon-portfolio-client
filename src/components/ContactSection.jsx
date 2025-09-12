@@ -135,7 +135,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <div className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div id="Contact" className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Premium Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Contact-themed Particles */}

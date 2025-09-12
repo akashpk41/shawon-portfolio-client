@@ -45,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <div className="relative pb-60 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div id="Home" className="relative pb-60 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Advanced Dark Particles Background */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Dark Glowing Particles */}
@@ -141,7 +141,7 @@ const Header = () => {
 
             {/* Desktop Premium Navigation */}
             <div className="hidden md:flex items-center space-x-2">
-              {["Home", "Gallery", "Blogs", "About", "Contact"].map(
+              {["Home", "Gallery", "Blogs", "Contact", "About"].map(
                 (item, index) => (
                   <a
                     key={item}
@@ -188,7 +188,7 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden backdrop-blur-2xl bg-black/10 border-b border-orange-400/10 shadow-2xl">
             <div className="px-6 py-6 space-y-3">
-              {["Home", "Gallery", "Blogs", "About", "Contact"].map(
+              {["Home", "Gallery", "Blogs", "Contact", "About"].map(
                 (item, index) => (
                   <a
                     key={item}
@@ -393,7 +393,7 @@ const Header = () => {
                           </svg>
                         </div>
                         <div>
-                        
+
                         </div>
                       </div>
                     </div>

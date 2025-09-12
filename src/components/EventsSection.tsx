@@ -403,7 +403,7 @@ const pastEvents = [
         }
       `}</style>
 
-      <div className="relative py-10 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden" data-events-section="true">
+      <div id="Gallery" className="relative py-10 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden" data-events-section="true">
         {/* Premium Background Effects */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Event-themed Particles */}

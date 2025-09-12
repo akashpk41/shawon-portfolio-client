@@ -98,7 +98,7 @@ const BlogSection = () => {
   const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
-    <div id="Blogs" className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div  id="Blogs" className="relative py-18 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Enhanced Blog Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Blog-themed Particles */}
