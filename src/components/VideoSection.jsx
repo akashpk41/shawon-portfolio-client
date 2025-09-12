@@ -123,7 +123,7 @@ const VideoSection = () => {
     events: [
       {
         id: 5,
-        title: "Election Campaign Rally - Pabna",
+        title: "July: The vow of revolution, the dawn of fearless change.",
         description: "Massive public gathering addressing local development and national vision",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/qF3rZXWf/Whats-App-Image-2025-08-30-at-14-15-40-c4526be3.jpg",
@@ -134,8 +134,8 @@ const VideoSection = () => {
       },
       {
         id: 6,
-        title: "Women Empowerment Conference",
-        description: "Celebrating women's achievements and discussing gender equality policies",
+        title: "Respecting the families who carry the legacy of sacrifice and courage.",
+        description: "The strength of our freedom lies in the sacrifices of these families",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/MxCDPR4t/Whats-App-Image-2025-08-30-at-14-15-40-b50bcb70.jpg",
         duration: "28:34",
@@ -145,7 +145,7 @@ const VideoSection = () => {
       },
       {
         id: 7,
-        title: "Independence Day Celebration",
+        title: "5th August Celebration",
         description: "Commemorating national independence with cultural programs and speeches",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/bD3Z4bs/Whats-App-Image-2025-08-30-at-14-15-39-7a8f7525.jpg",
@@ -169,8 +169,8 @@ const VideoSection = () => {
     community: [
       {
         id: 9,
-        title: "Blood Donation Drive 2025",
-        description: "Community initiative saving lives through voluntary blood donation program",
+        title: "Shot in the knee. Denied treatment. Still unbroken — Arafat Bhai",
+        description: "A bullet to his knee, hours of suffering, threats to doctors — yet Arafat Bhai stood strong in the face of injustice",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/9M2KPjT/Whats-App-Image-2025-08-30-at-14-15-39-c7e199b7.jpg",
         duration: "12:45",
@@ -180,8 +180,8 @@ const VideoSection = () => {
       },
       {
         id: 10,
-        title: "Flood Relief Operations",
-        description: "Emergency response and community support during natural disaster",
+        title: "He lost his leg, not his courage — Salute to Mirazul Bhai",
+        description: "For freedom, many gave all — Mirazul Bhai is one of them.",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/5x4bfBcs/Whats-App-Image-2025-08-30-at-14-15-39-b866f8ac.jpg",
         duration: "16:22",
@@ -191,7 +191,7 @@ const VideoSection = () => {
       },
       {
         id: 11,
-        title: "Tree Plantation Campaign",
+        title: "Shot and denied care, yet the spirit remains unshaken.",
         description: "Environmental conservation initiative with community participation",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/cKMv2PJd/Whats-App-Image-2025-08-30-at-14-15-37-e4c06504.jpg",
@@ -202,7 +202,7 @@ const VideoSection = () => {
       },
       {
         id: 12,
-        title: "Education Support Program",
+        title: "They tried to silence the voice of protest with bullets — but courage doesn’t bleed.",
         description: "Providing educational materials and scholarships to underprivileged students",
         youtubeId: "dQw4w9WgXcQ",
         thumbnail: "https://i.ibb.co.com/PG1kFTDv/Whats-App-Image-2025-08-30-at-14-15-38-872e61db.jpg",
@@ -378,7 +378,7 @@ const VideoSection = () => {
 
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-300">
+                    <div className="w-12 h-12 md:w-20 md:h-20 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-300">
                       <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                       </svg>
@@ -386,7 +386,7 @@ const VideoSection = () => {
                   </div>
 
                   {/* Video Info Overlay */}
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute  top-0 md:top-100  md:left-4 md:right-4">
                     <div className="flex items-center gap-4 text-white flex-wrap">
                       <div className="px-3 py-1 bg-black/60 backdrop-blur-xl rounded-full">
                         <span className="font-semibold text-sm">{featuredVideo.duration}</span>
@@ -409,7 +409,7 @@ const VideoSection = () => {
             {/* Video Details */}
             <div className="space-y-8">
               <div>
-                <h4 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
+                <h4 className="text-2xl md:text-3xl font-black text-orange-400 mb-4 leading-tight">
                   {featuredVideo.title}
                 </h4>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -434,7 +434,7 @@ const VideoSection = () => {
               <div className="pt-6 flex gap-4 flex-wrap">
                 <button
                   onClick={() => openVideoModal(featuredVideo)}
-                  className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="group cursor-pointer inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
@@ -442,7 +442,7 @@ const VideoSection = () => {
                   Watch Now
                 </button>
                 <a
-                  href={`https://www.youtube.com/watch?v=${featuredVideo.youtubeId}`}
+                  href=''
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
@@ -469,7 +469,7 @@ const VideoSection = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
-                  className={`relative px-6 py-4 rounded-2xl font-bold transition-all duration-500 ${
+                  className={`relative cursor-pointer px-6 py-4 rounded-2xl font-bold transition-all duration-500 ${
                     activeTab === category.id
                       ? "bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-2xl"
                       : "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-orange-600/20 hover:to-red-600/20"
@@ -532,7 +532,7 @@ const VideoSection = () => {
 
                     {/* Duration */}
                     <div className="absolute top-3 right-3 px-2 py-1 bg-black/60 backdrop-blur-xl rounded-full">
-                      <span className="text-white text-xs font-bold">{video.duration}</span>
+                      <span className="text-white text-base font-bold">{video.duration}</span>
                     </div>
 
                     {/* Play Button */}
@@ -548,25 +548,25 @@ const VideoSection = () => {
                   {/* Content */}
                   <div className="p-6">
                     {/* Title */}
-                    <h3 className="text-lg font-black text-white mb-3 leading-tight group-hover:text-orange-300 transition-colors duration-300 line-clamp-2">
+                    <h3 className="text-lg font-black  mb-3 leading-tight text-orange-400 transition-colors duration-300 line-clamp-2">
                       {video.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-gray-200 text-sm leading-relaxed mb-4 line-clamp-2">
                       {video.description}
                     </p>
 
                     {/* Stats */}
                     <div className="flex items-center justify-between pt-3 border-t border-white/10">
-                      <div className="flex items-center gap-2 text-gray-400">
+                      <div className="flex items-center gap-2 text-blue-400">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
                         <span className="text-xs font-semibold">{video.views}</span>
                       </div>
-                      <div className="text-gray-400 text-xs font-semibold">
+                      <div className="text-blue-400 text-xs font-semibold">
                         {video.publishDate}
                       </div>
                     </div>
@@ -579,7 +579,7 @@ const VideoSection = () => {
 
         {/* Load More Button */}
         <div className="text-center mt-16">
-          <button className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-orange-600 hover:to-red-600 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300">
+          <button className="group cursor-pointer inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-orange-600 hover:to-red-600 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
@@ -593,7 +593,7 @@ const VideoSection = () => {
 
       {/* Video Modal */}
       {isModalOpen && selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
+        <div className="fixed inset-0 my-10 py-20 z-10000 flex items-center justify-center p-1 bg-black/90 backdrop-blur-sm">
           <div
             className="absolute inset-0 cursor-pointer"
             onClick={closeVideoModal}
@@ -607,16 +607,16 @@ const VideoSection = () => {
             {/* Close Button */}
             <button
               onClick={closeVideoModal}
-              className="absolute top-6 right-6 z-20 w-12 h-12 bg-black/80 hover:bg-red-600 rounded-full flex items-center justify-center text-white transition-all duration-300 group"
+              className="absolute cursor-pointer top-38 right-6 z-10000 w-14 h-14 bg-red-600 rounded-full flex items-center justify-center text-white transition-all duration-300 group"
             >
-              <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
             {/* Video Player */}
             <div className="aspect-video">
-              <YouTubeEmbed video={selectedVideo} autoplay={true} />
+              {/* <YouTubeEmbed video={selectedVideo} autoplay={true} /> */}
             </div>
 
             {/* Video Info */}
@@ -633,7 +633,7 @@ const VideoSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-black text-orange-400 leading-tight">
                     {selectedVideo.title}
                   </h3>
 
@@ -641,7 +641,7 @@ const VideoSection = () => {
                     {selectedVideo.description}
                   </p>
 
-                  <div className="flex items-center gap-6 pt-4 text-gray-400">
+                  <div className="flex items-center gap-6 pt-4 text-blue-400">
                     <div className="flex items-center gap-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -660,29 +660,28 @@ const VideoSection = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-4">
-                  <a
-                    href={`https://www.youtube.com/watch?v=${selectedVideo.youtubeId}`}
+                  <button
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full group inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
+                    className="w-full cursor-pointer group inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
-                    Open in YouTube
-                  </a>
+                  সকল ভিডিও শীঘ্রই যোগ করা হবে..
+                  </button>
 
                   <button
                     onClick={() => {
                       navigator.share({
                         title: selectedVideo.title,
                         text: selectedVideo.description,
-                        url: `https://www.youtube.com/watch?v=${selectedVideo.youtubeId}`
+                        url: ``
                       }).catch(() => {
-                        navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${selectedVideo.youtubeId}`);
+                        navigator.clipboard.writeText(``);
                       });
                     }}
-                    className="w-full group inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
+                    className="w-full cursor-pointer group inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
@@ -691,7 +690,7 @@ const VideoSection = () => {
                   </button>
 
                   <div className="pt-4 border-t border-white/10">
-                    <h4 className="text-white font-bold mb-3">Related Videos</h4>
+                    <h4 className="text-orange-400 font-bold mb-3">Related Videos</h4>
                     <div className="space-y-3">
                       {currentVideos.slice(0, 3).map((relatedVideo) => (
                         <button
@@ -702,7 +701,7 @@ const VideoSection = () => {
                           <div className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors line-clamp-2">
                             {relatedVideo.title}
                           </div>
-                          <div className="text-xs text-gray-400 mt-1">
+                          <div className="text-xs text-blue-400 mt-1">
                             {relatedVideo.duration} • {relatedVideo.views} views
                           </div>
                         </button>

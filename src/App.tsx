@@ -15,18 +15,18 @@ import VideoSection from './components/VideoSection'
 function App() {
   return (
     <div>
-      {/* <ScrollProgressBar /> */}
-      {/* <Header /> */}
-      {/* <AboutSection /> */}
-      {/* <EventsSection /> */}
+      <ScrollProgressBar />
+      <Header />
+      <AboutSection />
+      <EventsSection />
       {/* <GallerySection /> */}
       <PersonalGallerySection />
       <VideoSection />
       {/* !! completed !!! */}
-      {/* <BlogSection /> */}
+      <BlogSection />
       {/* <MediaSection /> */}
-      {/* <ContactSection /> */}
-      {/* <Footer /> */}
+      <ContactSection />
+      <Footer />
     </div>
   )
 }

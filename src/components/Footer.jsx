@@ -169,7 +169,7 @@ const Footer = () => {
 
                   {/* Developer */}
 
-{/* <DeveloperCredit /> */}
+<DeveloperCredit />
 
 
 
