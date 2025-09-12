@@ -191,7 +191,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <div id="About" className="relative pt-32 pb-2 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+    <div  className="relative pt-32 pb-2 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(30)].map((_, i) => (
