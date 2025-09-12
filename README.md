@@ -1,69 +1,92 @@
-# React + TypeScript + Vite
+# 🌟 Shawon Hossain – Personal Portfolio & Political Journey Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 A **modern, interactive, and responsive** personal portfolio website built with the latest frontend technologies.
+This platform highlights Shawon Hossain's **political ideology, student activism, blogs, social initiatives, life moments, events**, and more — all in one immersive digital experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Website
 
-## Expanding the ESLint configuration
+🌐 **[Visit Website](https://shawon-hossain.onrender.com/)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖼️ Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![Website Preview](https://i.ibb.co.com/0yFFWj71/Page-1.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧱 Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| 🛠️ Tech / Library               | 🔎 Description                           |
+| ------------------------------- | ---------------------------------------- |
+| ⚛️ **React 19**                 | Frontend UI library                      |
+| 🌀 **Tailwind CSS 4**           | Utility-first modern CSS framework       |
+| ⚡ **Vite**                     | Fast development & build tool            |
+| 🔎 **TypeScript**               | Type-safe development                    |
+| 🎯 **Lucide React**             | Icon library for clean UI                |
+| 💫 **Motion**                   | Animation library for smooth transitions |
+| 🧩 **Class Variance Authority** | Utility-based variant styling            |
+| 🧠 **Tailwind Merge**           | Class conflict resolution tool           |
+| 🎨 **tw-animate-css**           | Tailwind-based animation classes         |
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 💎 Key Features
+
+| 🌟 Feature                         | 📄 Description                                          |
+| ---------------------------------- | ------------------------------------------------------- |
+| 🧑‍🎓 **Student Leadership Showcase** | Political identity, activism timeline, and social role  |
+| 📰 **Blog & Insights**             | In-depth articles on politics, society, and development |
+| 🎥 **Video Gallery**               | Speeches, interviews, and documentary-style videos      |
+| 📸 **Life Moments Gallery**        | Cherished personal and public life photographs          |
+| 🗓️ **Events & Movements**          | Photo-based documentation of key events and protests    |
+| 📬 **Contact Form**                | Direct communication channel                            |
+| 🌐 **Multi-section Navigation**    | Seamless routing and navigation experience              |
+| 📱 **Responsive Design**           | Optimized for mobile, tablet, and desktop               |
+
+---
+
+## 📸 Screenshots
+
+### 🎥 Video Documentaries
+
+![Videos](https://i.ibb.co.com/bRgSz917/Page-4.png)
+
+### 📰 Blog & Featured Articles
+
+![Blogs](https://i.ibb.co.com/B5Njz2RL/Page-7.png)
+
+### 🗓️ Events Timeline
+
+![Events](https://i.ibb.co.com/R4dMz0sS/Page-9.png)
+
+### 📸 Life Moments Gallery
+
+![Gallery](https://i.ibb.co.com/ZP9jLTb/Page-12.png)
+
+---
+
+---
+
+## 📜 **License & Credits**
+
+> This project is **not open source**.
+> All rights reserved to **Shawon Hossain**, the original author and owner of the website and its content.
+
+🔗 **Facebook:** [facebook.com/shawonhossain](https://www.facebook.com/muhammadshawonhossain34)
+🌐 **Official Website:** [www.shawonhossain.com](https://shawon-hossain.onrender.com/)
+
+---
+
+## ✍️ **Developer**
+
+**Akash PK**
+💼 MERN Stack Developer | 💻 Frontend Engineer | 🎨 UI/UX Enthusiast
+
+📧 **Email:** [akashpk741@gmail.com](mailto:akashpk741@gmail.com)
+🐙 **GitHub:** [github.com/akashpk41](https://github.com/akashpk41)
+📘 **Facebook:** [facebook.com/atapk41](https://www.facebook.com/atapk41)
+
+---
