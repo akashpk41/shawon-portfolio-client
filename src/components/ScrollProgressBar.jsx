@@ -100,7 +100,7 @@ const ScrollProgressBar = () => {
 
       {/* Progress Counter - Premium Style */}
       <div
-        className={`fixed top-4 left-34 md:left-[300px]lg:left-125  z-[5000] transition-all duration-500 transform ${
+        className={`fixed top-4  left-34 md:left-[300px] lg:left-125  z-[5000] transition-all duration-500 transform ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
         }`}
       >
@@ -185,7 +185,7 @@ const ScrollProgressBar = () => {
 
       {/* Main Progress Bar */}
       <div
-        className={`fixed left-0 mt-1  right-0 z-[4999] h-1.5  lg:h-2 transition-all duration-500 ${
+        className={`fixed left-0 mt-1 md:-mt-2 right-0 z-[4999] h-1.5  lg:h-2 transition-all duration-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ top: "var(--navbar-height, 80px)" }}

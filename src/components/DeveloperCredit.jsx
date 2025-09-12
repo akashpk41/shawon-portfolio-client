@@ -54,7 +54,7 @@ const DeveloperCredit = () => {
           <div className="relative mb-8">
             <div className="relative w-64 h-64 mx-auto mb-6">
               <img
-                src="https://i.ibb.co.com/GhZWtVc/1740218980929.jpg"
+                src="/public/akash.jpg"
                 alt="Akash PK"
                 className="w-full h-full rounded-full object-cover border-4 border-orange-500 shadow-2xl"
               />

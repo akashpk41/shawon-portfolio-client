@@ -274,7 +274,7 @@ const Header = () => {
               </div>
 
               {/* Premium Description */}
-              <div className="backdrop-blur-3xl -mt-15 bg-gradient-to-br from-black/50 to-gray-900/30 border border-orange-500/30 rounded-3xl p-6 shadow-2xl">
+              <div className="backdrop-blur-3xl -mt-15 md:-mt-0 bg-gradient-to-br from-black/50 to-gray-900/30 border border-orange-500/30 rounded-3xl p-6 shadow-2xl">
                <p className="text-xl text-gray-100 leading-relaxed tracking-wide">
   একজন প্রগতিশীল{" "}
   <span className="text-orange-400 font-black">
@@ -303,7 +303,7 @@ const Header = () => {
 
               {/* Premium CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-8">
-                <button className="group relative px-12 py-6 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 rounded-2xl font-black text-white shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-500 overflow-hidden tracking-wide">
+                <button className="group cursor-pointer relative px-12 py-6 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 rounded-2xl font-black text-white shadow-2xl hover:shadow-orange-500/40 transform hover:scale-110 transition-all duration-500 overflow-hidden tracking-wide">
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <span className="relative flex items-center justify-center gap-4 text-lg">
                     <svg
@@ -323,7 +323,7 @@ const Header = () => {
                   </span>
                 </button>
 
-                <button className="group px-12 py-6 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transform hover:scale-110 transition-all duration-500 shadow-2xl tracking-wide">
+                <button className="group cursor-pointer px-12 py-6 backdrop-blur-2xl bg-gradient-to-br from-black/40 to-gray-900/40 border border-orange-500/40 rounded-2xl font-bold text-white hover:bg-gradient-to-br hover:from-orange-600/20 hover:to-red-600/20 transform hover:scale-110 transition-all duration-500 shadow-2xl tracking-wide">
                   <span className="flex items-center justify-center gap-4 text-lg">
                     <svg
                       className="w-7 h-7 transform group-hover:rotate-12 transition-transform"
@@ -393,12 +393,7 @@ const Header = () => {
                           </svg>
                         </div>
                         <div>
-                          <p className="text-white text-2xl font-black tracking-wide">
-                            POLITICAL LEADER
-                          </p>
-                          <p className="text-orange-400 text-lg font-bold tracking-widest">
-                            VISIONARY & PUBLIC SERVANT
-                          </p>
+                        
                         </div>
                       </div>
                     </div>

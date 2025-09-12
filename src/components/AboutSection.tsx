@@ -236,7 +236,7 @@ const AboutSection = () => {
         </div>
 
         {/* Hero Bio Section */}
-        <div className="grid md:grid-cols-2 -mt-18 gap-14 items-center mb-32">
+        <div className="grid md:grid-cols-2 -mt-18 md:mt-0 gap-14 items-center mb-32">
           {/* Mobile Image */}
           <div
             className={`md:hidden mb-12 transform transition-all duration-1200 delay-300 ${
@@ -321,36 +321,16 @@ const AboutSection = () => {
               <div className="absolute -top-12 -left-12 w-24 h-24 bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-3xl backdrop-blur-sm border border-orange-500/40 animate-float shadow-2xl" />
               <div className="absolute -bottom-12 -right-12 w-20 h-20 bg-gradient-to-r from-yellow-600/30 to-orange-600/30 rounded-full backdrop-blur-sm border border-yellow-500/40 animate-pulse shadow-2xl" />
 
-              <div className="relative w-96 h-[500px] mx-auto">
+              <div className="relative w-full h-[500px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-red-500/30 to-yellow-500/40 rounded-4xl blur-2xl animate-pulse" />
                 <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 rounded-4xl border border-orange-500/40 overflow-hidden shadow-2xl">
                   <div className="w-full h-full bg-gradient-to-br from-orange-700 to-red-800 rounded-4xl flex items-center justify-center">
-                    <img src="./shawon.png" alt="" />
+                    <img src="https://i.ibb.co.com/fVSW81gF/492942913-1958518174956827-1270583043355150440-n.jpg" alt="" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-4xl" />
                 </div>
               </div>
 
-              {/* Professional Badge */}
-              <div className="absolute bottom-10 left-10 right-10">
-                <div className="backdrop-blur-3xl bg-gradient-to-br from-black/60 to-gray-900/40 border border-orange-500/40 rounded-3xl p-6 shadow-2xl">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-2xl">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-white text-xl font-black tracking-wide">
-                        ছাত্র নেতা ও রাজনীতিবিদ
-                      </p>
-                      <p className="text-orange-400 text-sm font-bold tracking-widest">
-                        বৈষম্যবিরোধী আন্দোলনের নেতা
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
